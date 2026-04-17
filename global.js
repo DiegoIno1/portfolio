@@ -43,15 +43,16 @@ for (let p of pages) {
   a.textContent = title;
   nav.append(a);
 
-  if (a.host === location.host && a.pathname === location.pathname) {
-    a.classList.add('current');
-  }
+  
 
-  a.classList.toggle(
+a.classList.toggle(
     'current',
     a.host === location.host && a.pathname === location.pathname,
   );
+
+
+if (a.host === location.host && a.pathname === location.pathname) {
+    a.classList.add('current');
+  }
 }
-
-
 

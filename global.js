@@ -74,3 +74,13 @@ select.addEventListener('input', function (event) {
   console.log('color scheme changed to', event.target.value);
   document.documentElement.style.setProperty('color-scheme', event.target.value);
 });
+
+if ("colorScheme" in localStorage) {
+  document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
+  select.value = localStorage.colorScheme;
+}
+
+select.addEventListener('input', function (event) {
+  localStorage.colorScheme = event.target.value;
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
+});

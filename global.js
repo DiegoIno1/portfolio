@@ -69,3 +69,6 @@ document.body.insertAdjacentHTML(
   </label>`,
 );
 
+document.querySelector('.color-scheme select').addEventListener('change', (event) => {
+  document.documentElement.style.colorScheme = event.target.value;
+});

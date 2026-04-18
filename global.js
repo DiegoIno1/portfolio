@@ -69,6 +69,7 @@ document.body.insertAdjacentHTML(
   </label>`,
 );
 
-document.querySelector('.color-scheme select').addEventListener('change', (event) => {
-  document.documentElement.style.colorScheme = event.target.value;
+const select = document.querySelector('.color-scheme select');
+select.addEventListener('input', function (event) {
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
 });

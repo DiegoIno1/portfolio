@@ -8,8 +8,10 @@ const projectsContainer = document.querySelector('.projects');
 renderProjects(latestProjects, projectsContainer, 'h2');
 
 const githubData = await fetchGitHubData('diegoino1');
+console.log('GitHub Data:', githubData);
 
 const profileStats = document.querySelector('#profile-stats');
+console.log('Profile stats element:', profileStats);
 
 if (profileStats) {
   profileStats.innerHTML = `

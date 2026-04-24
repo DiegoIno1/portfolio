@@ -1,61 +1,68 @@
 [
   {
-    "title": "Lorem ipsum dolor sit.",
+    "title": "DSC 106 Project 1",
+    "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea perspiciatis fugit ex enim modi, porro vel, inventore vero ut quidem assumenda provident rem saepe exercitationem laudantium adipisci, iste ab. Asperiores."
+    "description": "Created a visualization on food data, analyzing the relationship between sodium and food processing levels in different foods."
   },
   {
-    "title": "Dolor cupiditate amet mollitia?",
+    "title": "DSC 106 Project 2",
+    "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Consectetur, animi dicta tempora rerum nobis dolor alias adipisci a tempore incidunt dignissimos ducimus enim ipsa eaque? Pariatur deserunt dolorum labore quod cum quis porro voluptas, laboriosam repellat. Sint, facilis!"
+    "description": "A project intended to create visualizations that persuasively give two different perspectives to the same data. It showcases how deceptive techniques can be used in order to change how data is portrayed."
   },
   {
-    "title": "Aperiam nesciunt et culpa!",
+    "title": "League of Legends Gold Advantage Analysis",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Nesciunt recusandae nemo perferendis consequatur numquam, enim quis ut itaque repellat ea blanditiis, saepe excepturi nihil perspiciatis atque ipsa possimus! Dignissimos quas sit dolorum earum est placeat perferendis, minima quae."
+    "description": "An analysis that took data from professional League of Legends matches and utilized linear regression in order to test to see if the gold advantage of teams significantly impacted the chances of winning. (Done for DSC 80)"
   },
   {
-    "title": "Quidem eius dignissimos accusamus?",
+    "title": "What Maximizes the Value of a Used Car?",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Recusandae saepe corrupti optio magnam minus eum accusantium numquam, cumque hic, dignissimos ratione omnis quia tempora voluptas repellendus animi odit sed, iure ipsa ea maxime officia libero assumenda! Nobis, consectetur."
+    "description": "A project aiming to create a predictive model in order to predict prices of used cars based on their described characteristics. After constructing multiple models and comparing them, we took the best performing model and used it in order to find what variables impact the value most. (Done for COGS 108)"
   },
   {
-    "title": "Ea numquam dolorum dolor.",
+    "title": "Predicting User Ratings for Recipes",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Error, officiis, corporis facere praesentium laudantium voluptatibus reprehenderit ut assumenda iusto doloremque, quaerat placeat. Cumque harum in, saepe aliquam voluptates, aut blanditiis accusamus architecto laborum mollitia consequatur eum porro quisquam!"
+    "description": "A project utilizing a recommender system-based approach in order to predict the user ratings for recipes. Because of the fact that we used a recommender system-based approach, it utilized similarities to other recipes and familiarities a user may have in order to best predict the ratings. (Done for CSE 158)"
   },
   {
-    "title": "Officia, laboriosam. Quae, placeat.",
+    "title": "Genre Bias in the Academy Awards.",
+    "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Repellendus voluptates ratione, nisi hic corrupti fuga iusto ipsam placeat sit provident soluta incidunt similique laudantium voluptatum! Aspernatur repellat nesciunt nulla sed facilis repellendus veniam molestiae reprehenderit. Error, beatae odit."
+    "description": "This project utilized public data on the Oscars in order to analyze if there was a genre bias in which movies won an Oscar award. In order to find significant results, it used multiple tests including the Wald-Wolfowitz Runs Test and the Chi-Squared Test of Independence. (Done for Math 189)"
   },
   {
-    "title": "Optio magni reprehenderit est.",
+    "title": "Virtual Chef Assistant",
+    "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Ipsum harum temporibus obcaecati assumenda, similique animi consequuntur possimus nobis eos sit asperiores veritatis, delectus dolorum illum numquam fugit distinctio ut illo ducimus quibusdam dignissimos. Ex quas nihil eius nesciunt."
+    "description": "This project was a .NET MAUI Blazor Hybrid app that utilized voice recognition to navigate a cookbook stored in an online database. The app is capable of both uploading and retreiving data from the database based on per-user accounts."
   },
   {
-    "title": "Consequatur cum aperiam accusantium!",
+    "title": "Placeholder 1",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Fugiat accusantium illo in hic qui alias quaerat odit necessitatibus corporis molestias voluptate corrupti voluptas architecto, rem, doloribus pariatur repudiandae iure perferendis commodi tempore! Illum nostrum repellendus laboriosam sit vero?"
   },
   {
-    "title": "Libero aliquid laboriosam nulla!",
+    "title": "Placeholder 2",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Quidem sequi eaque excepturi debitis nostrum ex repellendus corporis quia doloremque! Consequuntur dolore, sequi earum animi autem non cumque distinctio nostrum totam eligendi eveniet aliquam corporis aliquid assumenda nemo laudantium!"
   },
   {
-    "title": "Dolore ab similique temporibus.",
+    "title": "Placeholder 3",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Amet totam inventore voluptatibus! Cupiditate enim fuga laudantium eum a labore saepe quis molestias, deleniti dignissimos, ea atque cum itaque nihil ipsam excepturi exercitationem voluptatibus mollitia pariatur inventore maiores doloribus!"
   },
   {
-    "title": "Doloribus fugit commodi dolor!",
+    "title": "Placeholder 4",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Possimus eius magnam, commodi animi totam a nisi id odit laboriosam unde rem aut ipsum ex voluptas doloremque libero nostrum temporibus sed minus eligendi deleniti fuga praesentium. Voluptates, numquam eum!"
   },
   {
-    "title": "Reprehenderit similique cum facilis!",
+    "title": "Placeholder 5",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Expedita, temporibus consequuntur. Quos deleniti enim veritatis iusto rerum, voluptates delectus quisquam rem omnis sapiente id aliquam voluptatum. Eos facilis cupiditate quidem voluptatem saepe architecto ipsam velit tempore hic excepturi."
   }

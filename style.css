@@ -126,18 +126,31 @@ select {
   font-family: inherit;
 }
 
+#profile-stats {
+  background: var(--card-bg, #f5f5f5);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 #profile-stats dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin: 0;
   text-align: center;
 }
 
 #profile-stats dt {
-  grid-row: 1;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
 #profile-stats dd {
-  grid-row: 2;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin: 0;
+  color: #0366d6;
 }

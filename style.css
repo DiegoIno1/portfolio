@@ -94,6 +94,31 @@ nav a:hover {
   overflow: visible;
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+
+  path {
+    cursor: pointer;
+    transition: 300ms;
+  }
+
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
 h1 {
   font-size: 400%;
 }

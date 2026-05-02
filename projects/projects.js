@@ -11,6 +11,7 @@ projectsTitle.innerHTML = `${projects.length} Projects`;
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
+let selectedIndex = -1;
 
 function renderPieChart(projectsGiven) {
   let newRolledData = d3.rollups(
@@ -29,15 +30,39 @@ function renderPieChart(projectsGiven) {
 
   let svg = d3.select('#projects-pie-plot');
   svg.selectAll('path').remove();
-  d3.select('.legend').selectAll('li').remove();
+  let legend = d3.select('.legend');
+  legend.selectAll('li').remove();
 
-  newArcs.forEach((arc, idx) => {
-    svg.append('path')
+  newArcs.forEach((arc, i) => {
+    svg
+      .append('path')
       .attr('d', arc)
-      .attr('fill', colors(idx));
+      .attr('fill', colors(i))
+      .on('click', () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+
+        svg
+          .selectAll('path')
+          .attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
+
+        legend
+          .selectAll('li')
+          .attr('class', (_, idx) =>
+            idx === selectedIndex ? 'legend-item selected' : 'legend-item'
+          );
+
+        if (selectedIndex === -1) {
+          renderProjects(projectsGiven, projectsContainer, 'h2');
+        } else {
+          let selectedYear = newData[selectedIndex].label;
+          let filteredProjects = projectsGiven.filter(
+            (p) => p.year === selectedYear
+          );
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
+      });
   });
 
-  let legend = d3.select('.legend');
   newData.forEach((d, idx) => {
     legend
       .append('li')
@@ -54,6 +79,7 @@ let searchInput = document.querySelector('.searchBar');
 
 searchInput.addEventListener('input', (event) => {
   query = event.target.value;
+  selectedIndex = -1; // reset selection on new search
   let filteredProjects = projects.filter((project) => {
     let values = Object.values(project).join('\n').toLowerCase();
     return values.includes(query.toLowerCase());

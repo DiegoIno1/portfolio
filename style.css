@@ -88,6 +88,12 @@ nav a:hover {
   font-variant-numeric: oldstyle-nums;
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
 h1 {
   font-size: 400%;
 }

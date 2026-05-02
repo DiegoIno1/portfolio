@@ -79,6 +79,15 @@ nav a:hover {
   margin: 0;
 }
 
+.projects article footer {
+  font-size: 0.85rem;
+  color: oklch(50% 5% 200);
+  font-style: italic;
+  margin-top: auto;
+  font-family: Baskerville, 'Baskerville Old Face', serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
 h1 {
   font-size: 400%;
 }

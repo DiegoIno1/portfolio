@@ -45,28 +45,11 @@ function processCommits(data) {
 function renderCommitInfo(data, commits) {
   const dl = d3.select('#stats').append('dl').attr('class', 'stats');
 
-  dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
-  dl.append('dd').text(data.length);
-
-  dl.append('dt').text('Total commits');
-  dl.append('dd').text(commits.length);
-
-  dl.append('dt').text('Number of files');
-  dl.append('dd').text(d3.group(data, (d) => d.file).size);
-
-  dl.append('dt').text('Maximum file length');
-  dl.append('dd').text(d3.max(data, (d) => d.line));
-
-  dl.append('dt').text('Average file length');
   const fileLengths = d3.rollups(
     data,
     (v) => d3.max(v, (v) => v.line),
     (d) => d.file,
   );
-  dl.append('dd').text(Math.round(d3.mean(fileLengths, (d) => d[1])));
-
-  dl.append('dt').text('Average line length');
-  dl.append('dd').text(Math.round(d3.mean(data, (d) => d.length)));
 
   const workByPeriod = d3.rollups(
     data,
@@ -74,8 +57,34 @@ function renderCommitInfo(data, commits) {
     (d) => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' }),
   );
   const maxPeriod = d3.greatest(workByPeriod, (d) => d[1])?.[0];
-  dl.append('dt').text('Most active time of day');
-  dl.append('dd').text(maxPeriod);
+
+  let card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+  card.append('dd').text(data.length);
+
+  card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').text('Total commits');
+  card.append('dd').text(commits.length);
+
+  card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').text('Number of files');
+  card.append('dd').text(d3.group(data, (d) => d.file).size);
+
+  card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').text('Max file length');
+  card.append('dd').text(d3.max(data, (d) => d.line));
+
+  card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').text('Avg file length');
+  card.append('dd').text(Math.round(d3.mean(fileLengths, (d) => d[1])));
+
+  card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').text('Avg line length');
+  card.append('dd').text(Math.round(d3.mean(data, (d) => d.length)));
+
+  card = dl.append('div').attr('class', 'stat-card');
+  card.append('dt').text('Most active');
+  card.append('dd').text(maxPeriod);
 }
 
 let data = await loadData();
